@@ -1,11 +1,16 @@
 @font-face {
     font-family: "Proxima-Nova Regular";
-    src: url(fonts/proxima_nova/ProximaNova-Regular.db098dc77c7aafe660e58e9eb280be48.ttf);
+    src: url("fonts/proxima_nova/ProximaNova-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Proxima-Nova Bold";
+    src: url("fonts/proxima_nova/ProximaNova-Bold.ttf");
 }
 
 @font-face {
     font-family: "Proxima-Nova Semibold";
-    src: url(fonts/proxima_nova/ProximaNova-Semibold.dfa26f09d155df035c988cf5583a2f6e.ttf);
+    src: url("fonts/proxima_nova/ProximaNova-Semibold.ttf");
 }
 
 * {

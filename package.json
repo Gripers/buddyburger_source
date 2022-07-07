@@ -24,6 +24,7 @@
     "react": "^18.2.0",
     "react-circular-progressbar": "^2.0.4",
     "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.2.0",
     "react-i18next": "^11.17.2",
     "react-lazy-load-image-component": "^1.5.4",
     "react-owl-carousel": "^2.3.3",

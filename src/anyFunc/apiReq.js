@@ -82,10 +82,9 @@ const ApiReqContextProvider = ({ children }) => {
         phone_number: phone,
       })
       .then((res) => {
+        setLoading(false);
         if (res.data.status == 200) {
           logconSwitcher();
-          setLoading(false);
-        } else if (res.data.status == 400) {
           setLoading(false);
         }
       });
@@ -97,6 +96,9 @@ const ApiReqContextProvider = ({ children }) => {
         phone_number: phone,
       })
       .then((res) => {
+        setLoading(false);
+        localStorage.setItem("phone_number", res.data.phone);
+        localStorage.setItem("username", res.data.user_name);
         if ((res.data.status == 200) & (res.data.is_admin == false)) {
           localStorage.setItem("user", JSON.stringify(res.data));
           setLoginConfirmOpen(false);
@@ -105,8 +107,6 @@ const ApiReqContextProvider = ({ children }) => {
           localStorage.setItem("admin", JSON.stringify(res.data));
           localStorage.setItem("token", res.data.token);
           setLoginConfirmOpen(false);
-        } else if (res.data.status == 400) {
-          setLoading(false);
         }
       });
   };
@@ -117,10 +117,9 @@ const ApiReqContextProvider = ({ children }) => {
         phone_number: regphone,
       })
       .then((res) => {
+        setLoading(false);
         if (res.data.status == 200) {
           regconSwitcher();
-          setLoading(false);
-        } else if (res.data.status == 400) {
           setLoading(false);
         }
       });
@@ -132,6 +131,9 @@ const ApiReqContextProvider = ({ children }) => {
         phone_number: regphone,
       })
       .then((res) => {
+        setLoading(false);
+        localStorage.setItem("phone_number", res.data.phone);
+        localStorage.setItem("username", res.data.user_name);
         if ((res.data.status == 200) & (res.data.is_admin == false)) {
           localStorage.setItem("user", JSON.stringify(res.data));
           setRegConOpen(false);
@@ -139,8 +141,6 @@ const ApiReqContextProvider = ({ children }) => {
         } else if (res.data.is_admin == true) {
           localStorage.setItem("admin", JSON.stringify(res.data));
           localStorage.setItem("token", res.data.token);
-        } else if (res.data.status == 400) {
-          setLoading(false);
         }
       });
   };

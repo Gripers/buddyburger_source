@@ -63,7 +63,6 @@ const Categories = () => {
                 aria-expanded="false"
               >
                 <img src={cart} alt="" />
-                <p>{t("btns.cart")}</p>
                 <span>{totalItems}</span>
               </button>
               <ul

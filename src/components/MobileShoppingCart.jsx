@@ -23,11 +23,13 @@ const MobileShoppingCart = () => {
 
   const toGroup = () => {
     axios.post(
-      `https://api.telegram.org/bot5340893698:AAH4J2w4HGhs-TgdYmLZ5UFWEDPvFDPZ1O4/sendMessage?chat_id=-1001694192631&text=${encodeURIComponent(
-        `<b>Заказ:</b> ${(Math.floor(Math.random() * 10000) + 10000)
-          .toString()
-          .substring(1)}
-<b>Телефон:</b> +998974251244
+      `https://api.telegram.org/bot5340893698:AAH4J2w4HGhs-TgdYmLZ5UFWEDPvFDPZ1O4/sendMessage?chat_id=-1001694192631&text=${encodeURIComponent(`<b>Заказ:</b> ${(
+        Math.floor(Math.random() * 10000) + 10000
+      )
+        .toString()
+        .substring(1)}
+<b>Имя:</b> ${localStorage.getItem("username")}
+<b>Телефон:</b> +${localStorage.getItem("phone_number")}
 ${items
   .map((item) => {
     return `
@@ -36,8 +38,7 @@ ${item.count} x ${item.price} = ${item.count * item.price} UZS`;
   })
   .join("\n")}
 
-<b>Сумма:</b> ${total} UZS`
-      )}&parse_mode=html`
+<b>Сумма:</b> ${total} UZS`)}&parse_mode=html`
     );
   };
 

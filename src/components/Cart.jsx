@@ -5,6 +5,7 @@ import empty_cart_pic from "../img/empty_cart.png";
 import "../styles/cart.scss";
 import axios from "axios";
 import { DopFuncsContext } from "../anyFunc/dopFuncs";
+import toast from "react-hot-toast";
 
 const Cart = () => {
   const { isEmpty, items, updateItemQuantity, removeItem, emptyCart } =
@@ -12,14 +13,17 @@ const Cart = () => {
   const { t } = useTranslation();
   const { handleLoginOpen } = React.useContext(DopFuncsContext);
   let total = 0;
+  const notify = () => toast.success("Успешно");
 
   const toGroup = () => {
-    axios.post(
-      `https://api.telegram.org/bot5340893698:AAH4J2w4HGhs-TgdYmLZ5UFWEDPvFDPZ1O4/sendMessage?chat_id=-1001694192631&text=${encodeURIComponent(
-        `<b>Заказ:</b> ${(Math.floor(Math.random() * 10000) + 10000)
-          .toString()
-          .substring(1)}
-<b>Телефон:</b> +998974251244
+    axios
+      .post(
+        `https://api.telegram.org/bot5340893698:AAH4J2w4HGhs-TgdYmLZ5UFWEDPvFDPZ1O4/sendMessage?chat_id=-1001694192631&text=${encodeURIComponent(
+          `<b>Заказ:</b> ${(Math.floor(Math.random() * 10000) + 10000)
+            .toString()
+            .substring(1)}
+<b>Имя:</b> ${localStorage.getItem("username")}
+<b>Телефон:</b> +${localStorage.getItem("phone_number")}
 ${items
   .map((item) => {
     return `
@@ -29,8 +33,13 @@ ${item.count} x ${item.price} = ${item.count * item.price} UZS`;
   .join("\n")}
 
 <b>Сумма:</b> ${total} UZS`
-      )}&parse_mode=html`
-    );
+        )}&parse_mode=html`
+      )
+      .then((res) => {
+        if (res.status == 200) {
+          notify();
+        }
+      });
   };
 
   const funcs = () => {
