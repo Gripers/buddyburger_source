@@ -14,7 +14,6 @@ const AddProduct = () => {
     definitionuz,
     definitionen,
     definitionru,
-    image,
     price,
     category,
     addProduct,

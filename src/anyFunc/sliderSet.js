@@ -18,6 +18,7 @@ const SliderSetContextProvider = ({ children }) => {
     loop: false,
     margin: 10,
     nav: true,
+    center: false,
     items: 6,
     navText: [`<img src=${prev} >`, `<img src=${next} >`],
     responsive: {
@@ -39,7 +40,7 @@ const SliderSetContextProvider = ({ children }) => {
       860: {
         items: 5,
       },
-      1030: {
+      1260: {
         items: 6,
       },
     },

@@ -15,9 +15,16 @@ const RegConfirmDialog = () => {
     setRegSms,
     regphone,
     setRegPhone,
-    handleRegisterConfirmRequest,
+    handleRegisterConfirmRequest
   } = React.useContext(ApiReqContext);
   const { loading, setLoading } = React.useContext(DopFuncsContext);
+
+  const enterKey = (event) => {
+    if (event.key === "Enter") {
+      setLoading(true);
+      handleRegisterConfirmRequest();
+    }
+  };
 
   return (
     <div className="reg-dialog">
@@ -31,19 +38,13 @@ const RegConfirmDialog = () => {
           height="24"
           onClick={() => setRegConOpen(false)}
         >
-          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+          <path
+            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
         </svg>
       </div>
       <div className="reg-dialog-body">
         <h3>{t("dialog.registration.des")}</h3>
         <div className="reg-dialog-body-forms my-4">
-          <input
-            type="text"
-            placeholder={`${t("dialog.login.code")}`}
-            className="name-inp"
-            value={regsms}
-            onChange={(e) => setRegSms(e.target.value)}
-          />
           <PhoneInput
             inputClass="shadow-none"
             country="uz"
@@ -51,6 +52,17 @@ const RegConfirmDialog = () => {
             value={regphone}
             onChange={setRegPhone}
             placeholder={`${t("dialog.registration.phone")}`}
+            disabled
+          />
+          <input
+            type="text"
+            placeholder={`${t("dialog.login.code")}`}
+            className="name-inp"
+            value={regsms}
+            onChange={(e) => setRegSms(e.target.value)}
+            onKeyDown={regsms.length >= 6 ? enterKey : null}
+            minLength={6}
+            maxLength={6}
           />
           <button
             className="d-flex justify-content-center align-items-center"

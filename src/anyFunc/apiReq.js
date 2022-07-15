@@ -11,7 +11,7 @@ const ApiReqContextProvider = ({ children }) => {
     setLoginConfirmOpen,
     regconSwitcher,
     setRegConOpen,
-    setLoading,
+    setLoading
   } = React.useContext(DopFuncsContext);
   const [phone, setPhone] = React.useState("");
   const [logconsms, setLogConSms] = React.useState("");
@@ -79,7 +79,7 @@ const ApiReqContextProvider = ({ children }) => {
   const handleLoginRequest = () => {
     axios
       .post(`${url}/send/`, {
-        phone_number: phone,
+        phone_number: phone
       })
       .then((res) => {
         setLoading(false);
@@ -93,7 +93,7 @@ const ApiReqContextProvider = ({ children }) => {
     axios
       .post(`${url}/login/`, {
         sms: logconsms,
-        phone_number: phone,
+        phone_number: phone
       })
       .then((res) => {
         setLoading(false);
@@ -114,7 +114,7 @@ const ApiReqContextProvider = ({ children }) => {
     axios
       .post(`${url}/register/`, {
         full_name: regname,
-        phone_number: regphone,
+        phone_number: regphone
       })
       .then((res) => {
         setLoading(false);
@@ -128,7 +128,7 @@ const ApiReqContextProvider = ({ children }) => {
     axios
       .post(`${url}/login/`, {
         sms: regsms,
-        phone_number: regphone,
+        phone_number: regphone
       })
       .then((res) => {
         setLoading(false);
@@ -162,9 +162,9 @@ const ApiReqContextProvider = ({ children }) => {
         url: `${url}/burgers/`,
         method: "POST",
         headers: {
-          Authorization: `Token ${localStorage.getItem("token")}`,
+          Authorization: `Token ${localStorage.getItem("token")}`
         },
-        data: formData,
+        data: formData
       }).then(() => window.location.reload());
     } catch (error) {
       alert(error);
@@ -175,8 +175,8 @@ const ApiReqContextProvider = ({ children }) => {
       axios
         .delete(`https://api.buddyburger.kannas.uz/burgers/${id}/`, {
           headers: {
-            Authorization: `Token ${localStorage.getItem("token")}`,
-          },
+            Authorization: `Token ${localStorage.getItem("token")}`
+          }
         })
         .then(() => window.location.reload());
     } catch (error) {
@@ -192,7 +192,9 @@ const ApiReqContextProvider = ({ children }) => {
     formData.append("definition_uz", eddefinitionuz);
     formData.append("definition_en", eddefinitionen);
     formData.append("definition_ru", eddefinitionru);
-    formData.append("image", edimage);
+    if (typeof edimage != "string") {
+      formData.append("image", edimage);
+    }
     formData.append("price", edprice);
     formData.append("category", edcategory);
 
@@ -201,9 +203,9 @@ const ApiReqContextProvider = ({ children }) => {
         url: `${url}/burgers/${id}/`,
         method: "PUT",
         headers: {
-          Authorization: `Token ${localStorage.getItem("token")}`,
+          Authorization: `Token ${localStorage.getItem("token")}`
         },
-        data: formData,
+        data: formData
       }).then(() => window.location.reload());
     } catch (error) {
       alert(error);
@@ -221,9 +223,9 @@ const ApiReqContextProvider = ({ children }) => {
         url: `${url}/categories/`,
         method: "POST",
         headers: {
-          Authorization: `Token ${localStorage.getItem("token")}`,
+          Authorization: `Token ${localStorage.getItem("token")}`
         },
-        data: formData,
+        data: formData
       }).then(() => window.location.reload());
     } catch (error) {
       alert(error);
@@ -234,8 +236,8 @@ const ApiReqContextProvider = ({ children }) => {
       axios
         .delete(`${url}/categories/${id}/`, {
           headers: {
-            Authorization: `Token ${localStorage.getItem("token")}`,
-          },
+            Authorization: `Token ${localStorage.getItem("token")}`
+          }
         })
         .then(() => window.location.reload());
     } catch (error) {
@@ -254,9 +256,9 @@ const ApiReqContextProvider = ({ children }) => {
         url: `${url}/categories/${id}/`,
         method: "PUT",
         headers: {
-          Authorization: `Token ${localStorage.getItem("token")}`,
+          Authorization: `Token ${localStorage.getItem("token")}`
         },
-        data: formData,
+        data: formData
       }).then(() => window.location.reload());
     } catch (error) {
       alert(error);
@@ -342,7 +344,7 @@ const ApiReqContextProvider = ({ children }) => {
           setcatnameuz,
           setcatnameen,
           setcatnameru,
-          addCategory,
+          addCategory
         }}
       >
         {children}

@@ -13,6 +13,13 @@ const RegDialog = () => {
   const { regname, setRegName, regphone, setRegPhone, handleRegisterRequest } =
     React.useContext(ApiReqContext);
 
+  const enterKey = (event) => {
+    if (event.key === "Enter") {
+      setLoading(true);
+      handleRegisterRequest();
+    }
+  };
+
   return (
     <div className="reg-dialog">
       <div className="reg-dialog-header">
@@ -45,6 +52,7 @@ const RegDialog = () => {
             value={regphone}
             onChange={setRegPhone}
             placeholder={`${t("dialog.registration.phone")}`}
+            onKeyDown={regphone.length >= 12 ? enterKey : null}
           />
           <button
             className="d-flex justify-content-center align-items-center"

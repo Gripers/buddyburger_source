@@ -18,6 +18,13 @@ const LoginConfirmDialog = () => {
   } = React.useContext(ApiReqContext);
   const { t } = useTranslation();
 
+  const enterKey = (event) => {
+    if (event.key === "Enter") {
+      setLoading(true);
+      handleLoginConfirmRequest();
+    }
+  };
+
   return (
     <div className="login-dialog">
       <div className="login-dialog-header">
@@ -43,6 +50,7 @@ const LoginConfirmDialog = () => {
             prefix=""
             value={phone}
             onChange={setPhone}
+            disabled
           />
           <input
             type="text"
@@ -50,6 +58,9 @@ const LoginConfirmDialog = () => {
             placeholder={`${t("dialog.login.code")}`}
             value={logconsms}
             onChange={(e) => setLogConSms(e.target.value)}
+            onKeyDown={logconsms.length >= 6 ? enterKey : null}
+            minLength={6}
+            maxLength={6}
           />
           <button
             className="d-flex justify-content-center align-items-center"
