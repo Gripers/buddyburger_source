@@ -14,6 +14,7 @@ import { DopFuncsContextProvider } from "./anyFunc/dopFuncs";
 import { ApiReqContextProvider } from "./anyFunc/apiReq";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
+import "owl.carousel/dist/owl.carousel";
 
 NProgress.configure({ showSpinner: false });
 

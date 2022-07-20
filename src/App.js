@@ -46,15 +46,15 @@ function App() {
           style: {
             background: "#363636",
             color: "#fff",
-            zIndex: "9999999"
+            zIndex: "9999999",
           }, // Default options for specific types
           success: {
             duration: 3000,
             theme: {
               primary: "green",
-              secondary: "black"
-            }
-          }
+              secondary: "black",
+            },
+          },
         }}
       />
     </div>

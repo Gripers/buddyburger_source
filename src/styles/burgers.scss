@@ -116,7 +116,24 @@
 
 @media all and (max-width: 550px) {
   .burger-card-header {
-    height: 145px !important;
+    padding: 2vh !important;
+    height: 150px !important;
+  }
+  .burger-card-body {
+    h4 {
+      font-size: 16px !important;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      min-height: 38.4px !important;
+    }
+
+    .dessser {
+      display: none !important;
+    }
   }
   .burger-card-body-foot {
     span {
@@ -129,8 +146,22 @@
   }
 }
 
+@media all and (min-width: 550px) {
+  .burger-card-body {
+    .pricon {
+      display: none !important;
+    }
+  }
+}
+
 @media all and (max-width: 350px) {
   .burgers-container {
+    padding: 4vh !important;
     grid-template-columns: 1fr;
+  }
+  .burger-card-body {
+    h4 {
+      min-height: initial !important;
+    }
   }
 }

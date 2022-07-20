@@ -1,1 +1,1 @@
-export const url = 'https://api.buddyburger.kannas.uz'
+export const url = "https://api.buddyburger.kannas.uz";

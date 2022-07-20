@@ -5,20 +5,21 @@
 
 .categories-slider {
   a {
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
     font-size: 18px;
     text-decoration: none;
     color: black;
-    padding: 2vh;
     border-radius: 12px;
-    transition: all .3s;
+    transition: all 0.3s;
     padding: 10px 16px;
-    width: -webkit-fill-available;
     height: 42px;
     cursor: pointer;
     background: white;
+  }
+  .owl-item {
+    //width: max-content !important;
   }
 }
 
@@ -35,19 +36,20 @@
 
   .hidden-categories-slider {
     a {
-      display: flex;
+      display: flex !important;
       justify-content: center;
       align-items: center;
       font-size: 18px;
       text-decoration: none;
       color: black;
-      padding: 2vh;
       border-radius: 12px;
-      transition: all .3s;
+      transition: all 0.3s;
       padding: 10px 16px;
-      width: -webkit-fill-available;
       height: 42px;
       cursor: pointer;
+    }
+    .owl-item {
+      //width: max-content !important;
     }
   }
 }
@@ -119,6 +121,10 @@
 }
 
 @media all and (min-width: 1280px) {
+  .categories-head-h1 {
+    max-width: 1146px;
+    margin: 0 auto;
+  }
   .categories-container {
     max-width: 1146px;
     margin: 0 auto;
@@ -134,6 +140,10 @@
 }
 
 @media all and (max-width: 1280px) {
+  .categories-head-h1 {
+    max-width: 95%;
+    margin: 0 auto;
+  }
   .categories-container {
     max-width: 95%;
     margin: 0 auto;

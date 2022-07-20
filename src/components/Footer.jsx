@@ -27,7 +27,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-body mt-4">
-        <p>© BuddyBurger 2005 - 2022 All rights reserved</p>
+        <p>© BuddyBurger 2022 All rights reserved</p>
         <div className="footer-body-icons">
           <a href="https://www.instagram.com/maxwayuz/" target={"_blank"}>
             <svg
@@ -76,7 +76,7 @@ const Footer = () => {
       <hr className="my-4" />
       <div className="footer-foot mt-4">
         <p>Пользовательское соглашение</p>
-        <p>Developed by dop</p>
+        <p>Developed by IT Academy</p>
       </div>
     </div>
   );
