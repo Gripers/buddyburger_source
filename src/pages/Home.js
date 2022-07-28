@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <div>
       <Navbar />
-      {/*<Header />*/}
+      <Header />
       <div className="mt-5">
         <Categories />
         <Burgers />

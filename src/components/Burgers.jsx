@@ -33,11 +33,7 @@ const Burgers = () => {
                       </div>
                       <div className="burger-card-body">
                         <h4>{burger.name_ru}</h4>
-                        <p className="dessser">
-                          Lorem ipsum dolor sit amet consectetur, adipisicing
-                          elit. Dolores, cupiditate aspernatur temporibus quidem
-                          ea ducimus.
-                        </p>
+                        <p className="dessser">{burger.definition_ru}</p>
                         <p className="pricon">{burger.price} UZS</p>
                         <div className="burger-card-body-foot">
                           {burger.price ? (
