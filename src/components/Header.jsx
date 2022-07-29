@@ -12,9 +12,9 @@ const Header = () => {
   return (
     <div>
       <OwlCarousel {...headersettings}>
-        {/*<div className="slider-item">*/}
-        {/*  <img src={header_first} alt="" />*/}
-        {/*</div>*/}
+        <div className="slider-item">
+          <img src={header_first} alt="" />
+        </div>
         <div className="slider-item">
           <img src={header_second} alt="" />
         </div>

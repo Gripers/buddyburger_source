@@ -6,6 +6,7 @@ import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import CategoryIcon from "@mui/icons-material/Category";
 import { Link } from "react-router-dom";
+import React from "react";
 
 const Sidebar = () => {
   return (

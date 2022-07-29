@@ -7,6 +7,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import React from "react";
 
 const data = [
   { name: "January", Total: 1200 },
