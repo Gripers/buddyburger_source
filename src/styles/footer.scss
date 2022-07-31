@@ -1,5 +1,5 @@
 .footer-container {
-  background: #51267d;
+  background: white;
   padding-top: 3%;
   padding-bottom: 2%;
 
@@ -7,7 +7,7 @@
     text-align: center;
 
     img {
-      width: 120px;
+      width: 70px;
       height: 100%;
       object-fit: contain;
     }
@@ -20,7 +20,7 @@
 
       .footer-nav-link {
         text-decoration: none;
-        color: white;
+        color: black;
         font-size: 18px;
       }
     }
@@ -31,7 +31,7 @@
     justify-content: space-between;
 
     p {
-      color: #d9dbe1;
+      color: black;
       font-size: 14px;
     }
 
@@ -41,7 +41,7 @@
       justify-content: space-around;
 
       a {
-        background: #623b8a;
+        background: black;
         width: 32px;
         height: 32px;
         display: flex;
@@ -63,7 +63,7 @@
     justify-content: space-between;
 
     p {
-      color: #d9dbe1;
+      color: black;
     }
   }
 }

@@ -46,19 +46,6 @@ body {
   display: none !important;
 }
 
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: white;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #51267d;
-  border-radius: 12px;
-}
-
 .owl-prev {
   width: 24px;
   height: 24px;
@@ -80,6 +67,5 @@ body {
 }
 
 .active-cat-slider-item {
-  background: #51267d !important;
-  color: white !important;
+  color: rgb(255, 71, 0) !important;
 }

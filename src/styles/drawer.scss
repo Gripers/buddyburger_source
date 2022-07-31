@@ -33,6 +33,12 @@
   }
 }
 
+.drawer-footer {
+  .dropdown-item:active {
+    background: rgba(255, 71, 0) !important;
+  }
+}
+
 @media all and (min-width: 600px) {
   .drawer-opener .MuiPaper-root {
     width: 60%;

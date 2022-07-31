@@ -87,7 +87,7 @@ function DrawerComponent() {
               id="dropdownMenuButton1"
               data-bs-toggle="dropdown"
               aria-expanded="false"
-              style={{ background: "#51267d", color: "white" }}
+              style={{ background: "rgba(255, 71, 0)", color: "white" }}
             >
               {t("selector")}
             </button>
@@ -95,10 +95,16 @@ function DrawerComponent() {
               className="drop-list dropdown-menu"
               aria-labelledby="dropdownMenuButton1"
             >
-              <li onClick={() => changeLanguage("ru")}>
+              <li
+                onClick={() => changeLanguage("ru")}
+                style={{ cursor: "pointer" }}
+              >
                 <a className="dropdown-item">Русский</a>
               </li>
-              <li onClick={() => changeLanguage("uz")}>
+              <li
+                onClick={() => changeLanguage("uz")}
+                style={{ cursor: "pointer" }}
+              >
                 <a className="dropdown-item">O'zbekcha</a>
               </li>
             </ul>

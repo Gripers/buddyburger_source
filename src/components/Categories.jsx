@@ -6,7 +6,7 @@ import { DopFuncsContext } from "../anyFunc/dopFuncs";
 import { ApiFuncsContext } from "../anyFunc/apiFuncs";
 import OwlCarousel from "react-owl-carousel";
 import { Link } from "react-scroll";
-import cart from "../img/cart.svg";
+import cart from "../img/cart.png";
 import Cart from "./Cart";
 import { useCart } from "react-use-cart";
 

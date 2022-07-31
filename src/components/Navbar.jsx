@@ -9,7 +9,7 @@ import {
 import DrawerComponent from "./Drawer";
 import logo from "../img/logo.png";
 import "../styles/navbar.scss";
-import cart from "../img/cart.svg";
+import cart from "../img/cart.png";
 import { useTranslation } from "react-i18next";
 import { DopFuncsContext } from "../anyFunc/dopFuncs";
 import Cart from "./Cart";

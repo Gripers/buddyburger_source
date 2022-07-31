@@ -7,3 +7,15 @@
     object-fit: cover;
   }
 }
+
+@media all and (min-width: 550px) {
+  .mobile-img {
+    display: none !important;
+  }
+}
+
+@media all and (max-width: 550px) {
+  .desktop-img {
+    display: none !important;
+  }
+}

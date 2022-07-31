@@ -18,9 +18,6 @@
     cursor: pointer;
     background: white;
   }
-  .owl-item {
-    //width: max-content !important;
-  }
 }
 
 .dropped-slider {
@@ -48,9 +45,6 @@
       height: 42px;
       cursor: pointer;
     }
-    .owl-item {
-      //width: max-content !important;
-    }
   }
 }
 
@@ -67,6 +61,11 @@
         padding: 2vh;
         border-radius: 50%;
 
+        img {
+          width: 20px;
+          height: 20px;
+        }
+
         p {
           margin: 0;
           font-size: 16px;
@@ -75,7 +74,7 @@
         }
 
         span {
-          background: red;
+          background: rgba(255, 71, 0);
           color: white;
           width: 12px;
           height: 12px;

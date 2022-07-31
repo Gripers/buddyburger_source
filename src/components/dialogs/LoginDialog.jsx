@@ -86,7 +86,7 @@ const LoginDialog = () => {
       <div className="login-dialog-footer">
         <p>
           {t("dialog.login.acc")}{" "}
-          <span style={{ color: "#51267d" }} onClick={loginSwitcher}>
+          <span style={{ color: "#ff6124" }} onClick={loginSwitcher}>
             {t("dialog.login.reg")}
           </span>
         </p>

@@ -38,15 +38,20 @@
         display: flex;
         align-items: center;
 
+        img {
+          width: 20px;
+          height: 20px;
+        }
+
         p {
           margin: 0;
           font-size: 16px;
-          color: #51267d;
+          color: rgba(255, 71, 0);
           font-family: "Proxima-Nova Semibold";
         }
 
         span {
-          background: red;
+          background: rgba(255, 71, 0);
           color: white;
           width: 12px;
           height: 12px;
@@ -94,14 +99,14 @@
     padding: 1vh 4vh;
     border: none;
     border-radius: 8px;
-    background: #51267d;
-    color: white;
+    background: none;
+    color: black;
     font-family: "Proxima-Nova Semibold";
   }
 
   .selector-btn {
-    background: #51267d;
-    color: white;
+    background: none;
+    color: black;
   }
 
   .drop-list {
@@ -109,7 +114,7 @@
       cursor: pointer;
 
       &:hover {
-        background: #51267d;
+        background: rgb(239 97 39);
         color: white;
       }
     }
@@ -120,9 +125,13 @@
   padding: 1vh 4vh;
   border: none;
   border-radius: 8px;
-  background: #51267d;
-  color: white;
+  background: none;
+  color: black;
   font-family: "Proxima-Nova Semibold";
+}
+
+.nav-tool-bar {
+  min-height: 80px !important;
 }
 
 @media all and (min-width: 1280px) {

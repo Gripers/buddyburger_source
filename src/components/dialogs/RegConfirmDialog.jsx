@@ -81,7 +81,7 @@ const RegConfirmDialog = () => {
       <div className="reg-dialog-footer">
         <p>
           {t("dialog.registration.acc")}{" "}
-          <span style={{ color: "#51267d" }} onClick={regSwitcher}>
+          <span style={{ color: "#ff6124" }} onClick={regSwitcher}>
             {t("dialog.registration.log")}
           </span>
         </p>

@@ -1,7 +1,6 @@
 import React from "react";
-import prev from "../img/prev.svg";
-import next from "../img/next.svg";
-import $ from "jquery";
+import prev from "../img/prev.png";
+import next from "../img/next.png";
 
 const SliderSetContext = React.createContext();
 
@@ -23,7 +22,7 @@ const SliderSetContextProvider = ({ children }) => {
     margin: 10,
     nav: true,
     center: false,
-    navText: [`<img src=${prev} >`, `<img src=${next} >`],
+    navText: [`<img src=${prev} width="24px" height="24px" >`, `<img src=${next} width="24px" height="24px" >`],
     responsive: {
       0: {
         items: 1,
