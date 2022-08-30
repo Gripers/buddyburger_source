@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "Proxima-Nova Regular";
+  src: url("fonts/proxima_nova/ProximaNova-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Proxima-Nova Bold";
+  src: url("fonts/proxima_nova/ProximaNova-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Proxima-Nova Semibold";
+  src: url("fonts/proxima_nova/ProximaNova-Semibold.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Proxima-Nova Regular";
+}
+
+*::selection {
+  background: rgb(255, 71, 0);
+  color: white;
+}
+
+body {
+  overflow-x: hidden !important;
+  background: #f6f6f6 !important;
+}
+
+.btn {
+  box-shadow: none !important;
+}
+
+.slick-prev::before {
+  content: "" !important;
+}
+
+.slick-next::before {
+  content: "" !important;
+}
+
+.flag-dropdown {
+  display: none !important;
+}
+
+.owl-prev {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 19%;
+  margin-left: -25px;
+  display: block !important;
+  border: 0px solid black;
+}
+
+.owl-next {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 19%;
+  right: -30px;
+  display: block !important;
+  border: 0px solid black;
+}
+
+.active-cat-slider-item {
+  color: rgb(255, 71, 0) !important;
+}
+
+.active-payment {
+  border: 1px solid rgba(255, 71, 0) !important;
+  background: white !important;
+}
+
+.active-order {
+  border: 1px solid rgba(255, 71, 0) !important;
+  background: white !important;
+}
+
+.map-container {
+  width: 100% !important;
+  height: 300px !important;
+  border-radius: 12px !important;
+}
+
+.active-track {
+  transform: translate3d(0px, 0px, 0px) !important;
+}

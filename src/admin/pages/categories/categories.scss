@@ -1,0 +1,19 @@
+.categories-home {
+  display: flex;
+
+  .categories-homeContainer {
+    flex: 6;
+  }
+}
+.categories-edit-form {
+  width: 95%;
+  display: grid;
+  row-gap: 20px;
+  margin: 0 auto;
+}
+.add-category-form {
+  width: 95%;
+  display: grid;
+  row-gap: 20px;
+  margin: 0 auto;
+}

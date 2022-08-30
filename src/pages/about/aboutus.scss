@@ -1,0 +1,45 @@
+.aboutus-card {
+  background: white;
+  border-radius: 12px;
+  padding: 3vh;
+
+  .aboutus-card-head {
+    img {
+      display: none; //temporarily
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+  }
+
+  .aboutus-card-body {
+    h3 {
+      font-size: 24px;
+      font-family: "Proxima-Nova Semibold";
+    }
+
+    p {
+      font-size: 16px;
+
+      a {
+        text-decoration: none;
+        color: rgba(255, 71, 0);
+      }
+    }
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .aboutus-container {
+    max-width: 1146px;
+    margin: 0 auto;
+  }
+}
+
+@media all and (max-width: 1280px) {
+  .aboutus-container {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+}

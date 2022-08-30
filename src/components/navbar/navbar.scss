@@ -1,0 +1,143 @@
+.logo-div {
+  display: flex;
+  width: 50px;
+  height: 50px;
+
+  .logo {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.nav-links {
+  display: flex;
+  margin-left: 40px;
+
+  .nav-link {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    margin-left: 40px;
+    padding: 0;
+    font-family: "Proxima-Nova Semibold";
+  }
+}
+
+.btns-div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  .nav-drop-down {
+    .dropdown {
+      .cart-btn {
+        gap: 10px;
+        border: none;
+        background: none;
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 20px;
+          height: 20px;
+        }
+
+        p {
+          margin: 0;
+          font-size: 16px;
+          color: rgba(255, 71, 0);
+          font-family: "Proxima-Nova Semibold";
+        }
+
+        span {
+          background: rgba(255, 71, 0);
+          color: white;
+          width: 12px;
+          height: 12px;
+          position: absolute;
+          left: 12px;
+          top: -2px;
+          border-radius: 50%;
+          font-size: 10px;
+          font-weight: bold;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      ul {
+        width: 402px;
+        height: auto;
+        padding: 25px;
+        border: none;
+        border-radius: 12px;
+        transform: translate3d(-300px, 20px, 0px) !important;
+
+        &::before {
+          content: "";
+          width: 0;
+          height: 0;
+          border-bottom: 15px solid white;
+          border-left: 15px solid transparent;
+          border-right: 15px solid transparent;
+          position: relative;
+          top: -60px;
+          left: 90%;
+        }
+      }
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0;
+    }
+  }
+
+  .sign-btn {
+    padding: 1vh 4vh;
+    border: none;
+    border-radius: 8px;
+    background: none;
+    color: black;
+    font-family: "Proxima-Nova Semibold";
+  }
+
+  .selector-btn {
+    background: none;
+    color: black;
+  }
+
+  .drop-list {
+    a {
+      cursor: pointer;
+
+      &:hover {
+        background: rgb(239 97 39);
+        color: white;
+      }
+    }
+  }
+}
+
+.mobile-sign-btn {
+  padding: 1vh 4vh;
+  border: none;
+  border-radius: 8px;
+  background: none;
+  color: black;
+  font-family: "Proxima-Nova Semibold";
+}
+
+.nav-tool-bar {
+  min-height: 80px !important;
+}
+
+@media all and (min-width: 1280px) {
+  .nav-tool-bar {
+    max-width: 1146px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}

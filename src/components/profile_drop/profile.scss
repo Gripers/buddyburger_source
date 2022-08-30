@@ -1,0 +1,19 @@
+.profile-drop {
+  .dropdown {
+    ul {
+      border-radius: 12px;
+      border: none;
+
+      li {
+        cursor: pointer;
+
+        a {
+          &:hover {
+            background: black;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

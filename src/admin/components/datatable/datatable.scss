@@ -1,0 +1,38 @@
+.taible {
+  .edit-btn {
+    transition: 0.205s ease-in;
+    background: #8cc0de;
+  }
+  .edit-btn:hover {
+    background: #59a2cc;
+    transform: scale(1.05);
+  }
+
+  .delete-btn {
+    transition: 0.205s ease-in;
+    background: #ed5f5f;
+  }
+  .delete-btn:hover {
+    background: #e24b4b;
+    transform: scale(1.05);
+  }
+}
+
+.products-edit-form {
+  display: grid;
+  row-gap: 20px;
+}
+
+.table-parent {
+  margin-top: 1em;
+}
+
+thead {
+  background: rgb(238, 238, 238);
+
+  border-radius: 5px;
+}
+
+.tr {
+  transition: 0.3s ease-in-out;
+}

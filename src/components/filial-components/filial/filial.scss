@@ -1,0 +1,61 @@
+.filial-card {
+  background: white;
+  border-radius: 12px;
+  padding: 3vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .filial-card-left {
+    display: grid;
+    width: 250px;
+
+    h4 {
+      font-family: "Proxima-Nova Semibold";
+      font-size: 20px;
+    }
+
+    span {
+      font-size: 14px;
+    }
+  }
+
+  .filial-card-medium {
+    display: grid;
+    row-gap: 10px;
+
+    span {
+      font-size: 14px;
+    }
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .filials-container {
+    max-width: 1146px;
+    margin: 0 auto;
+  }
+}
+
+@media all and (max-width: 1280px) {
+  .filials-container {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .filial-card-medium {
+    display: none !important;
+  }
+}
+
+@media all and (max-width: 300px) {
+  .filial-card {
+    display: block !important;
+  }
+  .filial-card-right {
+    margin-top: 5%;
+    text-align: center;
+  }
+}

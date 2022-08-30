@@ -1,0 +1,89 @@
+.reg-dialog-glav {
+  .MuiPaper-root {
+    border-radius: 12px;
+    width: 422px;
+    height: auto;
+    padding: 1vh;
+
+    .reg-dialog {
+      .reg-dialog-header {
+        display: flex;
+        justify-content: end;
+
+        svg {
+          cursor: pointer;
+        }
+      }
+
+      .reg-dialog-body {
+        text-align: center;
+
+        h3 {
+          font-family: "Proxima-Nova Semibold";
+          font-size: 24px;
+        }
+
+        .reg-dialog-body-forms {
+          display: grid;
+          row-gap: 20px;
+          width: 90%;
+          margin: 0 auto;
+
+          .name-inp {
+            padding: 2vh;
+            outline: none;
+          }
+
+          input {
+            border: none;
+            border-radius: 8px;
+            padding: 3vh;
+            background: #f7f7f7;
+            min-width: 100%;
+            font-size: 16px;
+            font-family: "Proxima-Nova Semibold", serif;
+          }
+
+          button {
+            border: none;
+            border-radius: 8px;
+            background: #ff6124;
+            color: white;
+            padding: 1.5vh;
+            min-width: 100%;
+          }
+        }
+      }
+
+      .reg-dialog-footer {
+        text-align: center;
+        font-size: 16px;
+
+        p {
+          span {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 500px) {
+  .reg-dialog-glav .MuiPaper-root {
+    margin: 5px;
+    overflow: hidden;
+
+    .reg-dialog-body-forms {
+      width: 95% !important;
+
+      input {
+        width: 100%;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+.cats-container {
+  h2 {
+    font-family: "Proxima-Nova Semibold";
+    font-size: 28px;
+  }
+}
+
+.burgers-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+
+  .burger-card {
+    background: white;
+    border-radius: 12px;
+
+    .burger-card-header {
+      display: flex;
+      width: 100%;
+      height: 220px;
+      padding: 5vh;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .burger-card-body {
+      padding: 2vh;
+
+      h4 {
+        font-family: "Proxima-Nova Semibold";
+        font-size: 20px;
+        min-height: 48px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #696969;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+
+      .burger-card-body-foot {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+          font-size: 17px;
+        }
+
+        button {
+          width: 50%;
+          border: none;
+          border-radius: 8px;
+          background: rgb(255 234 208);
+          color: rgb(255, 71, 0);
+          font-family: "Proxima-Nova Semibold";
+          padding: 1vh;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .cats-container {
+    max-width: 1146px;
+    margin: 0 auto;
+
+    h2 {
+      max-width: 1146px;
+      margin: 0 auto;
+    }
+  }
+  .burgers-container {
+    max-width: 1146px;
+    margin: 0 auto;
+  }
+}
+
+@media all and (max-width: 1280px) {
+  .cats-container {
+    max-width: 95%;
+    margin: 0 auto;
+
+    h2 {
+      max-width: 95%;
+      margin: 0 auto;
+    }
+  }
+  .burgers-container {
+    max-width: 95%;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media all and (max-width: 800px) {
+  .burgers-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .burger-card-header {
+    height: 190px !important;
+  }
+}
+
+@media all and (max-width: 550px) {
+  .burger-card-header {
+    padding: 2vh !important;
+    height: 150px !important;
+  }
+  .burger-card-body {
+    h4 {
+      font-size: 16px !important;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      min-height: 38.4px !important;
+    }
+
+    .dessser {
+      display: none !important;
+    }
+  }
+  .burger-card-body-foot {
+    span {
+      display: none !important;
+    }
+
+    button {
+      min-width: 100% !important;
+    }
+  }
+}
+
+@media all and (min-width: 550px) {
+  .burger-card-body {
+    .pricon {
+      display: none !important;
+    }
+  }
+}
+
+@media all and (max-width: 350px) {
+  .burgers-container {
+    padding: 4vh !important;
+    grid-template-columns: 1fr;
+  }
+  .burger-card-body {
+    h4 {
+      min-height: initial !important;
+    }
+  }
+}

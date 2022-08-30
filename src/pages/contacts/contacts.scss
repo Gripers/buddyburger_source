@@ -1,0 +1,39 @@
+.contacts-card {
+  background: white;
+  border-radius: 12px;
+  padding: 3vh;
+
+  h2 {
+    font-family: "Proxima-Nova Semibold";
+    font-size: 28px;
+  }
+
+  div {
+    font-size: 17px;
+
+    a {
+      color: rgba(255, 71, 0);
+      text-decoration: none;
+    }
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .contacts-container {
+    max-width: 1146px;
+    margin: 0 auto;
+  }
+}
+
+@media all and (max-width: 1280px) {
+  .contacts-container {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+}
+
+@media all and (min-width: 800px) {
+  .contacts-card {
+    width: 656px;
+  }
+}

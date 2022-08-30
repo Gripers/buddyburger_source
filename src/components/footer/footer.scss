@@ -1,0 +1,127 @@
+.footer-container {
+  background: white;
+  padding-top: 3%;
+  padding-bottom: 2%;
+
+  .footer-header {
+    text-align: center;
+
+    img {
+      width: 70px;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .footer-nav-links {
+      display: flex;
+      justify-content: space-around;
+      width: 50%;
+      margin: 0 auto;
+
+      .footer-nav-link {
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .footer-body {
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      color: black;
+      font-size: 14px;
+    }
+
+    .footer-body-icons {
+      width: 10%;
+      display: flex;
+      justify-content: space-around;
+
+      a {
+        background: black;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  hr {
+    height: 1px;
+    background: white;
+    opacity: 0.2;
+  }
+
+  .footer-foot {
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      color: black;
+    }
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .footer-header {
+    max-width: 1146px;
+    margin: 0 auto;
+  }
+  .footer-body {
+    max-width: 1146px;
+    margin: 0 auto;
+  }
+  .footer-container hr {
+    max-width: 1146px;
+    margin: 0 auto;
+  }
+  .footer-foot {
+    max-width: 1146px;
+    margin: 0 auto;
+  }
+}
+
+@media all and (max-width: 1280px) {
+  .footer-header {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+  .footer-body {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+  .footer-container hr {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+  .footer-foot {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .footer-nav-links {
+    display: grid !important;
+    row-gap: 20px;
+  }
+  .footer-body {
+    display: grid !important;
+    justify-content: center !important;
+
+    .footer-body-icons {
+      width: 50% !important;
+      margin: 0 auto;
+    }
+  }
+  .footer-container hr {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+}
